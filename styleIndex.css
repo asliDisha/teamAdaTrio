@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #eeeeee;
+}
+
+
+.upper-row{
+    background-color: #eeeeee;
+    height: 35vh;
+    display: flex;
+}
+.middle{
+    
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+   
+}
+.lower-row{
+    background-color: #eeeeee;
+    height: 35vh;
+    display: flex;
+}
+
+h1{
+    color: grey;
+}
+
+.card .overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures text does not overflow */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* Ensures the overlay text doesn't block clicks */
+}
+
+
+
+
+
+/* this is the next part */
+/* styleIndex.css */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.upper-row, .lower-row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5vw;
+    transition: background-color 0.3s ease;
+}
+
+
+.card:hover .overlay-text {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 3vw; /* Larger font size on hover */
+}
+
+@media (max-width: 600px) {
+    p{
+        font-size: 3.5vw; /* Adjust font size for smaller screens */
+    }
+
+    .card {
+        width: 100%; /* Ensure cards take full width on smaller screens */
+        height: auto; /* Allow cards to adjust height based on content */
+        margin-bottom: 10px; /* Reduce margin between cards on smaller screens */
+    }
+}
