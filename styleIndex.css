@@ -83,7 +83,8 @@ h1{
 /* styleIndex.css */
 
 .container {
-    max-width: 1200px;
+    max-width: 740px;
+    max-height: 100vh;
     margin: 0 auto;
     padding: 20px;
 }
